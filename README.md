@@ -1,4 +1,4 @@
-# **Battle Frogs**
+# **Battle-Frogs**
 ## **Date**: 1/20/2022
 ### **By**: Anatoliy Agadzhanov
 #### [GitHub](https://github.com/yesanatoliy) | [LinkedIn](https://www.linkedin.com/in/anatoliy-agadzhanov-5a2a54173/)
