@@ -8,13 +8,10 @@ Battle frogs is a single-player turn-style action game where you fight in the sw
 
 ***
 ### ***Technologies Used***
-* Item 1
-* Item 2
-    * Sub-Item
+* JavaScript
+* HTML
+* CSS
 
-1. Item 1
-2. Item 2
-    * Sub-Item
 ***
 ### ***Screenshots***
 
