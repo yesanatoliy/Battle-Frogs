@@ -87,19 +87,45 @@ const choosePunch = () => {
     updateHealth()
 }
 
+const checkWinner = () => {
+    if(playerHealth > 0 && enemyHealth <= 0){
+        document.getElementById('win-screen').style.opacity = 1
+    }
+    else if (playerHealth <= 0 && enemyHealth > 0){
+        //display defeat screen
+    }
+}
 
 
 
 //event listeners
 
 slashButton.addEventListener('click', () => {
-    chooseSlash()
+    if(playerHealth > 0 && enemyHealth > 0){
+        chooseSlash()
+        checkWinner()
+    }
+    else{
+        return
+    }
 })
 
 shootButton.addEventListener('click', () => {
-    chooseShoot()
+    if(playerHealth > 0 && enemyHealth > 0){
+        chooseShoot()
+        checkWinner()
+    }
+    else{
+        return
+    }
 })
 
 punchButton.addEventListener('click', () => {
-    choosePunch()
+    if(playerHealth > 0 && enemyHealth > 0){
+        choosePunch()
+        checkWinner()
+    }
+    else{
+        return
+    }
 })

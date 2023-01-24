@@ -41,7 +41,7 @@ img {
     grid-column: 3;
 }
 
-.win-screen{
+#win-screen{
     position:absolute;
     background-color: rgba(0, 100, 0, 0.9);
     color: white;
