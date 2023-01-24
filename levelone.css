@@ -41,7 +41,7 @@ img {
     grid-column: 3;
 }
 
-#win-screen{
+.win-screen{
     position:absolute;
     background-color: rgba(0, 100, 0, 0.9);
     color: white;
@@ -49,5 +49,9 @@ img {
     left: 20%;
     font-size: xx-large;
     padding: 100px;
+    opacity: 1
+}
+#win-screen{
+    position:absolute;
     opacity: 0
 }

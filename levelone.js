@@ -89,7 +89,9 @@ const choosePunch = () => {
 
 const checkWinner = () => {
     if(playerHealth > 0 && enemyHealth <= 0){
-        document.getElementById('win-screen').style.opacity = 1
+        let winScreen = document.getElementById('win-screen')
+        winScreen.id = null
+        winScreen.classList.toggle("win-screen")
     }
     else if (playerHealth <= 0 && enemyHealth > 0){
         //display defeat screen
