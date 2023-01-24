@@ -94,7 +94,9 @@ const checkWinner = () => {
         winScreen.classList.toggle("win-screen")
     }
     else if (playerHealth <= 0 && enemyHealth > 0){
-        //display defeat screen
+        let loseScreen = document.getElementById('lose-screen')
+        loseScreen.id = null
+        loseScreen.classList.toggle("lose-screen")
     }
 }
 

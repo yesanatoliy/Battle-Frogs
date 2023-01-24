@@ -55,3 +55,19 @@ img {
     position:absolute;
     opacity: 0
 }
+
+#lose-screen{
+    position: absolute;
+    opacity: 0;
+}
+
+.lose-screen{
+    position:absolute;
+    background-color: rgba(100, 0, 0, 0.9);
+    color: white;
+    top: 20%;
+    left: 20%;
+    font-size: xx-large;
+    padding: 100px;
+    opacity: 1
+}
