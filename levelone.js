@@ -45,6 +45,18 @@ const updateHealth = () => {
     else if(playerChoice === "slash" && enemyChoice === "punch"){
         playerHealth -= 10
     }
+    else if(playerChoice === "shoot" && enemyChoice === "slash"){
+        playerHealth -= 10
+    }
+    else if (playerChoice === "shoot" && enemyChoice === "punch"){
+        enemyHealth -= 10
+    }
+    else if (playerChoice === "punch" && enemyChoice === "shoot"){
+        playerHealth -= 10
+    }
+    else if (playerChoice === "punch" && enemyChoice === "slash"){
+        enemyHealth -= 10
+    }
 }
 
 const chooseSlash = () => {
