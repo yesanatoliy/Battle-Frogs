@@ -40,3 +40,14 @@ img {
     grid-row: 1;
     grid-column: 3;
 }
+
+.win-screen{
+    position:absolute;
+    background-color: rgba(0, 100, 0, 0.9);
+    color: white;
+    top: 20%;
+    left: 20%;
+    font-size: xx-large;
+    padding: 100px;
+    opacity: 0
+}
