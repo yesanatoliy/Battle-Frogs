@@ -11,8 +11,9 @@ playerHealthDisplay.innerText = playerHealth
 const enemyHealthDisplay = document.getElementById("enemyHealthDisplay")
 enemyHealthDisplay.innerText = enemyHealth
 const gameScreen = document.querySelector("#game-screen")
+const battleLog = document.getElementById("battle-log")
 
-console.log(slashButton, shootButton, punchButton)
+
 //functions
 
 const showIntro = () => {
@@ -57,13 +58,26 @@ const updateHealth = () => {
     else if (playerChoice === "punch" && enemyChoice === "slash"){
         enemyHealth -= 10
     }
+    enemyHealthDisplay.innerText = enemyHealth
+    playerHealthDisplay.innerText = playerHealth
 }
 
 const chooseSlash = () => {
     playerChoice = "slash"
     randomChoice()
-    console.log(enemyChoice, playerChoice)
+    updateHealth()
+}
 
+const chooseShoot = () => {
+    playerChoice = "shoot"
+    randomChoice()
+    updateHealth()
+}
+
+const choosePunch = () => {
+    playerChoice = "punch"
+    randomChoice()
+    updateHealth()
 }
 
 
@@ -72,14 +86,13 @@ const chooseSlash = () => {
 //event listeners
 
 slashButton.addEventListener('click', () => {
-    console.log(slashButton)
     chooseSlash()
 })
 
 shootButton.addEventListener('click', () => {
-    console.log(slashButton)
+    chooseShoot()
 })
 
 punchButton.addEventListener('click', () => {
-    console.log(slashButton)
+    choosePunch()
 })
