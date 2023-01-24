@@ -7,3 +7,31 @@ body, header{
 img {
     width: 25%;
 }
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr)
+}
+.playerImg {
+    grid-row: 2;
+    grid-column: 1;
+}
+.enemyImg {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+#slash {
+    grid-row: 3;
+    grid-column: 1
+}
+
+#shoot {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#punch {
+    grid-row: 3;
+    grid-column: 3;
+}
