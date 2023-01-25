@@ -12,7 +12,7 @@ const enemyHealthDisplay = document.getElementById("enemyHealthDisplay")
 enemyHealthDisplay.innerText = enemyHealth
 const gameScreen = document.querySelector("#game-screen")
 const battleLog = document.getElementById("battleLog")
-console.log(battleLog)
+
 
 //functions
 
@@ -100,6 +100,17 @@ const checkWinner = () => {
     }
 }
 
+const restartGame = () => {
+        let loseScreen = document.querySelector('.lose-screen')
+        console.log(loseScreen)
+        playerHealth = 100
+        enemyHealth = 25
+        enemyHealthDisplay.innerText = enemyHealth
+        playerHealthDisplay.innerText = playerHealth
+        loseScreen.classList.toggle("lose-screen")
+        loseScreen.id = "lose-screen"
+}
+
 
 
 //event listeners
@@ -133,3 +144,5 @@ punchButton.addEventListener('click', () => {
         return
     }
 })
+
+document.getElementById('retry-button').addEventListener('click', restartGame)
