@@ -18,10 +18,26 @@ const battleLog = document.getElementById("battleLog")
 
 const showIntro = () => {
     let intro = document.createElement('p')
-    intro.innerText = `Enemy: "Hey, what're you doing here??"`
+    intro.classList.add('dialogue')
+    intro.innerText = `Enemy: "Hey, what're you doing here??" (click to continue) --->`
     gameScreen.prepend(intro)
+    battleLog.classList.toggle('invisible')
+    slashButton.classList.toggle('invisible')
+    shootButton.classList.toggle('invisible')
+    punchButton.classList.toggle('invisible')
+    enemyHealthDisplay.classList.toggle('invisible')
+    playerHealthDisplay.classList.toggle('invisible')
 }
 showIntro()
+
+const startBattle = () => {
+    battleLog.classList.toggle('invisible')
+    slashButton.classList.toggle('invisible')
+    shootButton.classList.toggle('invisible')
+    punchButton.classList.toggle('invisible')
+    enemyHealthDisplay.classList.toggle('invisible')
+    playerHealthDisplay.classList.toggle('invisible')
+}
 
 const randomChoice = () => {
     if(Math.floor(Math.random()*10) <= 3){
@@ -146,3 +162,8 @@ punchButton.addEventListener('click', () => {
 })
 
 document.getElementById('retry-button').addEventListener('click', restartGame)
+
+document.getElementById('game-screen').children[0].addEventListener('click', () => {
+    startBattle()
+    document.getElementById('game-screen').children[0].remove()
+})
