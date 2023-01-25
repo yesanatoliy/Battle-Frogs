@@ -47,11 +47,11 @@ img {
     position:absolute;
     background-color: rgba(0, 100, 0, 0.9);
     color: white;
-    top: 20%;
-    left: 20%;
+    top: 15%;
     font-size: xx-large;
     padding: 100px;
-    opacity: 1
+    opacity: 1;
+    font-family: 'Press Start 2P', cursive;
 }
 #win-screen{
     position:absolute;
@@ -67,11 +67,11 @@ img {
     position:absolute;
     background-color: rgba(100, 0, 0, 0.9);
     color: white;
-    top: 20%;
-    left: 20%;
+    top: 15%;
     font-size: xx-large;
     padding: 100px;
-    opacity: 1
+    opacity: 1;
+    font-family: 'Press Start 2P', cursive;
 }
 .title{
     display:flex;
@@ -89,7 +89,9 @@ img {
     background-color: red;
     color: white;
     align-items: center;
-    font-size: larger
+    font-size: larger;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px;
     
 }
 img{
@@ -108,4 +110,12 @@ img{
     background-color: black;
     color: white;
     height: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#battleLog{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px;
+    border: 2px solid black;
 }
