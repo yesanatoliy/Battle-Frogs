@@ -1,6 +1,6 @@
 //global functions
 let playerHealth = 100
-let enemyHealth = 25
+let enemyHealth = 50
 let playerChoice
 let enemyChoice
 const slashButton = document.querySelector("#slash")
@@ -19,7 +19,7 @@ const battleLog = document.getElementById("battleLog")
 const showIntro = () => {
     let intro = document.createElement('p')
     intro.classList.add('dialogue')
-    intro.innerText = `Enemy: "Hey, what're you doing here??" (click to continue) --->`
+    intro.innerText = `Tree Frog: "Hey, what're you doing in my part of the swamp, punk?" (click to continue) --->`
     gameScreen.prepend(intro)
     battleLog.classList.toggle('invisible')
     slashButton.classList.toggle('invisible')
@@ -29,6 +29,14 @@ const showIntro = () => {
     playerHealthDisplay.classList.toggle('invisible')
 }
 showIntro()
+
+// const continueDialogue = () => {
+//     document.getElementById('game-screen').children[0].remove()
+//     let intro2 = document.createElement('p')
+//     intro2.classList.add('dialogue')
+//     intro2.innerText = `You: ribbit`
+//     gameScreen.prepend(intro2)
+// }
 
 const startBattle = () => {
     battleLog.classList.toggle('invisible')
@@ -54,7 +62,7 @@ const randomChoice = () => {
 const updateHealth = () => {
     if(playerChoice === enemyChoice){
         enemyHealth -= 5
-        playerHealth -= 5
+        playerHealth -= 100
         battleLog.innerText = `It's a tie! You both chose ${playerChoice} and both took 5 damage.`
     }
     else if(playerChoice === "slash" && enemyChoice === "shoot"){
@@ -110,6 +118,11 @@ const checkWinner = () => {
         winScreen.classList.toggle("win-screen")
     }
     else if (playerHealth <= 0 && enemyHealth > 0){
+        let loseScreen = document.getElementById('lose-screen')
+        loseScreen.id = null
+        loseScreen.classList.toggle("lose-screen")
+    }
+    else if (playerHealth <= 0 && enemyHealth <= 0){
         let loseScreen = document.getElementById('lose-screen')
         loseScreen.id = null
         loseScreen.classList.toggle("lose-screen")

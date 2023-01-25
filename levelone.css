@@ -60,14 +60,19 @@ img {
 
 #lose-screen{
     position: absolute;
-    opacity: 0;
+    opacity: 0;   
 }
 
 .lose-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position:absolute;
     background-color: rgba(100, 0, 0, 0.9);
     color: white;
     top: 15%;
+    left: 15%;
     font-size: xx-large;
     padding: 100px;
     opacity: 1;
@@ -128,7 +133,7 @@ ul{
     font-family: 'Press Start 2P', cursive;
     color: blue;
     background-color: black;
-    margin: 0;
+    margin: 10px 0;
     padding: 10px;
 }
 
@@ -154,4 +159,8 @@ a:visited{
     padding: 20px;
     border: 2px solid black;
     margin: 5% 30px;
+}
+
+#retry-button{
+    padding: 10px;
 }
