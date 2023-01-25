@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="levelone.css">
     <script defer src="levelone.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     <title>Battle-Frogs</title>
 </head>
 <body>
-    <h1>Battle-Frogs</h1>
+    <h1 class="title">Battle-Frogs</h1>
     <div id="game-screen">
         <div class="container">
             <div id="lose-screen">
@@ -20,15 +23,15 @@
                 <h1>YOU WIN!</h1>
                 <p>Go back to select a new level!</p>
             </div>
-            <p id="playerHealthDisplay"></p>
+            <p class="health-display" id="playerHealthDisplay"></p>
             <p id="battleLog"></p>
-            <p id="enemyHealthDisplay"></p>
+            <p class="health-display" id="enemyHealthDisplay"></p>
             <img class="playerImg" src="https://images.unsplash.com/photo-1496070242169-b672c576566b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1343&q=80">
             <img class="enemyImg" src="https://images.unsplash.com/photo-1579380678367-7f68e60dd839?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
+            </div>
             <button class="battleMove" id="slash">Slash</button>
             <button class="battleMove" id="shoot">Shoot</button>
             <button class="battleMove" id="punch">Punch</button>
-        </div>
     </div>
     
     <ul>

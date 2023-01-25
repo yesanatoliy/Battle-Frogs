@@ -9,8 +9,10 @@ img {
 }
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr)
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 .playerImg {
     grid-row: 2;
@@ -70,4 +72,28 @@ img {
     font-size: xx-large;
     padding: 100px;
     opacity: 1
+}
+.title{
+    display:flex;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    background-color: rgb(6, 61, 3);
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+.health-display{
+    display:flex;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    align-items: center;
+    font-size: larger
+    
+}
+img{
+    margin: 0 auto;
+    width: 50%;
+    padding: 0
 }

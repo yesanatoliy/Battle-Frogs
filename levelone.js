@@ -7,9 +7,9 @@ const slashButton = document.querySelector("#slash")
 const shootButton = document.querySelector("#shoot")
 const punchButton = document.querySelector("#punch")
 const playerHealthDisplay = document.getElementById("playerHealthDisplay")
-playerHealthDisplay.innerText = playerHealth
+playerHealthDisplay.innerText = `HP: ${playerHealth}`
 const enemyHealthDisplay = document.getElementById("enemyHealthDisplay")
-enemyHealthDisplay.innerText = enemyHealth
+enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
 const gameScreen = document.querySelector("#game-screen")
 const battleLog = document.getElementById("battleLog")
 
@@ -65,8 +65,8 @@ const updateHealth = () => {
         enemyHealth -= 10
         battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage.`
     }
-    enemyHealthDisplay.innerText = enemyHealth
-    playerHealthDisplay.innerText = playerHealth
+    enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
+    playerHealthDisplay.innerText = `HP: ${playerHealth}`
 }
 
 const chooseSlash = () => {
@@ -105,8 +105,8 @@ const restartGame = () => {
         console.log(loseScreen)
         playerHealth = 100
         enemyHealth = 25
-        enemyHealthDisplay.innerText = enemyHealth
-        playerHealthDisplay.innerText = playerHealth
+        enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
+        playerHealthDisplay.innerText = `HP: ${playerHealth}`
         loseScreen.classList.toggle("lose-screen")
         loseScreen.id = "lose-screen"
 }
