@@ -70,30 +70,22 @@ const updateHealth = () => {
         playerHealth -= 5
         battleLog.innerText = `It's a tie! You both chose ${playerChoice} and both took 5 damage.`
     }
-    else if(playerChoice === "slash" && enemyChoice === "shoot"){
+    else if(
+        playerChoice === "slash" && enemyChoice === "shoot" ||
+        playerChoice === "punch" && enemyChoice === "slash" ||
+        playerChoice === "shoot" && enemyChoice === "punch"){
         enemyHealth -= 10
         battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage.`
     }
-    else if(playerChoice === "slash" && enemyChoice === "punch"){
+    else if(
+        playerChoice === "slash" && enemyChoice === "punch" ||
+        playerChoice === "shoot" && enemyChoice === "slash" ||
+        playerChoice === "punch" && enemyChoice === "shoot"
+    ){
         playerHealth -= 10
         battleLog.innerText = `They stop you in your tracks! The enemy chose ${enemyChoice} and you take 10 damage.`
     }
-    else if(playerChoice === "shoot" && enemyChoice === "slash"){
-        playerHealth -= 10
-        battleLog.innerText = `They stop you in your tracks! The enemy chose ${enemyChoice} and you take 10 damage.`
-    }
-    else if (playerChoice === "shoot" && enemyChoice === "punch"){
-        enemyHealth -= 10
-        battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage.`
-    }
-    else if (playerChoice === "punch" && enemyChoice === "shoot"){
-        playerHealth -= 10
-        battleLog.innerText = `They stop you in your tracks! The enemy chose ${enemyChoice} and you take 10 damage.`
-    }
-    else if (playerChoice === "punch" && enemyChoice === "slash"){
-        enemyHealth -= 10
-        battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage.`
-    }
+    
     enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
     playerHealthDisplay.innerText = `HP: ${playerHealth}`
 }
