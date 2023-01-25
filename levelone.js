@@ -30,6 +30,12 @@ const showIntro = () => {
 }
 showIntro()
 
+const showBattleLog = () => {
+    if(battleLog.classList.value === 'invisible'){
+        battleLog.classList.toggle('invisible')
+    }
+}
+
 // const continueDialogue = () => {
 //     document.getElementById('game-screen').children[0].remove()
 //     let intro2 = document.createElement('p')
@@ -39,7 +45,6 @@ showIntro()
 // }
 
 const startBattle = () => {
-    battleLog.classList.toggle('invisible')
     slashButton.classList.toggle('invisible')
     shootButton.classList.toggle('invisible')
     punchButton.classList.toggle('invisible')
@@ -112,6 +117,7 @@ const choosePunch = () => {
 }
 
 const checkWinner = () => {
+    showBattleLog()
     if(playerHealth > 0 && enemyHealth <= 0){
         let winScreen = document.getElementById('win-screen')
         winScreen.id = null
