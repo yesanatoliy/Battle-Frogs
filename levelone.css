@@ -48,6 +48,7 @@ img {
     background-color: rgba(0, 100, 0, 0.9);
     color: white;
     top: 15%;
+    left: 15%;
     font-size: xx-large;
     padding: 100px;
     opacity: 1;
@@ -71,8 +72,8 @@ img {
     position:absolute;
     background-color: rgba(100, 0, 0, 0.9);
     color: white;
-    top: 15%;
-    left: 15%;
+    top: 25%;
+    left: 25%;
     font-size: xx-large;
     padding: 100px;
     opacity: 1;
