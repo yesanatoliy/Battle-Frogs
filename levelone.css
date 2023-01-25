@@ -81,6 +81,7 @@ img {
     margin: 0;
     padding: 10px;
     color: white;
+    border: 2px solid black
 }
 
 .health-display{
@@ -118,4 +119,27 @@ img{
     font-family: 'Press Start 2P', cursive;
     padding: 20px;
     border: 2px solid black;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: 'Press Start 2P', cursive;
+    color: blue;
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: inherit
 }
