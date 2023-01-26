@@ -47,13 +47,14 @@ img {
     position:absolute;
     background-color: rgba(0, 100, 0, 0.9);
     color: white;
-    top: 15%;
-    left: 15%;
+    top: 10%;
+    left: 10%;
     font-size: xx-large;
     padding: 100px;
     opacity: 1;
     font-family: 'Press Start 2P', cursive;
 }
+
 #win-screen{
     position:absolute;
     opacity: 0
@@ -72,8 +73,8 @@ img {
     position:absolute;
     background-color: rgba(100, 0, 0, 0.9);
     color: white;
-    top: 25%;
-    left: 25%;
+    top: 20%;
+    left: 22%;
     font-size: xx-large;
     padding: 100px;
     opacity: 1;
