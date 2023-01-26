@@ -93,7 +93,7 @@ img {
     background-color: black;
     margin: 0;
     padding: 10px;
-    color: rgb(255, 242, 0);
+    color: yellow;
 }
 
 .health-display {
@@ -142,7 +142,7 @@ img {
 ul {
     list-style: none;
     font-family: 'Press Start 2P', cursive;
-    color: blue;
+    color: red;
     padding: 10px;
 }
 
