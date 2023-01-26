@@ -120,11 +120,15 @@ img{
     font-family: 'Press Start 2P', cursive;
 }
 
+
 #battleLog{
-    text-align: center;
+    padding: 10px 0 0 10px;
     font-family: 'Press Start 2P', cursive;
-    padding: 20px;
+    height: 75%;
+    width: 75%;
     border: 2px solid black;
+    margin: 10px auto;
+    font-size: small;
 }
 
 ul{

@@ -13,7 +13,7 @@ enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
 const gameScreen = document.querySelector("#game-screen")
 const battleLog = document.getElementById("battleLog")
 
-
+console.log(battleLog)
 //functions
 
 const showIntro = () => {
