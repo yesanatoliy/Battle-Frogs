@@ -67,7 +67,7 @@ const randomChoice = () => {
 const updateHealth = () => {
     if(playerChoice === enemyChoice){
         enemyHealth -= 5
-        playerHealth -= 100
+        playerHealth -= 5
         battleLog.innerText = `It's a tie! You both chose ${playerChoice} and both took 5 damage.`
     }
     else if(
