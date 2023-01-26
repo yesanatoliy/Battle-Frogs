@@ -1,4 +1,3 @@
-//global functions
 let playerHealth = 100
 let enemyHealth = 50
 let playerChoice
@@ -13,9 +12,6 @@ enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
 const gameScreen = document.querySelector("#game-screen")
 const battleLog = document.getElementById("battleLog")
 
-console.log(battleLog)
-//functions
-
 const showIntro = () => {
     let intro = document.createElement('p')
     intro.classList.add('dialogue')
@@ -28,6 +24,7 @@ const showIntro = () => {
     enemyHealthDisplay.classList.toggle('invisible')
     playerHealthDisplay.classList.toggle('invisible')
 }
+
 showIntro()
 
 const showBattleLog = () => {
@@ -138,10 +135,6 @@ const restartGame = () => {
         loseScreen.id = "lose-screen"
 }
 
-
-
-//event listeners
-
 slashButton.addEventListener('click', () => {
     if(playerHealth > 0 && enemyHealth > 0){
         chooseSlash()
@@ -150,6 +143,8 @@ slashButton.addEventListener('click', () => {
     else{
         return
     }
+    let swordSound = new Audio('swordsound.mp3')
+    swordSound.play()
 })
 
 shootButton.addEventListener('click', () => {
@@ -160,6 +155,8 @@ shootButton.addEventListener('click', () => {
     else{
         return
     }
+    let bowSound = new Audio('bowsound.mp3')
+    bowSound.play()
 })
 
 punchButton.addEventListener('click', () => {
@@ -170,6 +167,8 @@ punchButton.addEventListener('click', () => {
     else{
         return
     }
+    let punchSound = new Audio('punchsound.mp3')
+    punchSound.play()
 })
 
 document.getElementById('retry-button').addEventListener('click', restartGame)

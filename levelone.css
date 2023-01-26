@@ -1,12 +1,15 @@
-body, header{
+body, header {
     margin: 0;
 }
+
 .intro {
     opacity: 0;
 }
+
 img {
     width: 25%;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -14,10 +17,12 @@ img {
     justify-content: center;
     align-items: center;
 }
+
 .playerImg {
     grid-row: 2;
     grid-column: 1;
 }
+
 .enemyImg {
     grid-row: 2;
     grid-column: 3;
@@ -43,8 +48,8 @@ img {
     grid-column: 3;
 }
 
-.win-screen{
-    position:absolute;
+.win-screen {
+    position: absolute;
     background-color: rgba(0, 100, 0, 0.9);
     color: white;
     top: 10%;
@@ -55,22 +60,22 @@ img {
     font-family: 'Press Start 2P', cursive;
 }
 
-#win-screen{
-    position:absolute;
+#win-screen {
+    position: absolute;
     opacity: 0
 }
 
-#lose-screen{
+#lose-screen {
     position: absolute;
-    opacity: 0;   
+    opacity: 0;
 }
 
-.lose-screen{
+.lose-screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position:absolute;
+    position: absolute;
     background-color: rgba(100, 0, 0, 0.9);
     color: white;
     top: 20%;
@@ -80,8 +85,9 @@ img {
     opacity: 1;
     font-family: 'Press Start 2P', cursive;
 }
-.title{
-    display:flex;
+
+.title {
+    display: flex;
     justify-content: center;
     font-family: 'Cinzel', serif;
     background-color: rgb(6, 61, 3);
@@ -91,8 +97,8 @@ img {
     border: 2px solid black
 }
 
-.health-display{
-    display:flex;
+.health-display {
+    display: flex;
     justify-content: center;
     background-color: red;
     color: white;
@@ -100,28 +106,29 @@ img {
     font-size: larger;
     font-family: 'Press Start 2P', cursive;
     padding: 20px;
-    
+
 }
-img{
+
+img {
     margin: 0 auto;
     width: 50%;
     padding: 0
 }
 
-.move-screen{
+.move-screen {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
 }
 
-.battleMove{
+.battleMove {
     background-color: black;
     color: white;
     height: 50px;
     font-family: 'Press Start 2P', cursive;
 }
 
-#battleLog{
+#battleLog {
     padding: 10px 0 0 10px;
     font-family: 'Press Start 2P', cursive;
     height: 75%;
@@ -131,7 +138,7 @@ img{
     font-size: small;
 }
 
-ul{
+ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -142,23 +149,23 @@ ul{
     padding: 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
-a:visited{
+a:visited {
     color: inherit
 }
 
-.invisible{
+.invisible {
     opacity: 0;
 }
 
-.dialogue{
+.dialogue {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     padding: 20px;
@@ -166,6 +173,6 @@ a:visited{
     margin: 5% 30px;
 }
 
-#retry-button{
+#retry-button {
     padding: 10px;
 }

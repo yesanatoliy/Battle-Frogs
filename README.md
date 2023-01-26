@@ -30,6 +30,8 @@ Battle frogs is a single-player turn-style action game where you fight in the sw
 
 Frog Images: [unsplash.com search](https://unsplash.com/photos/aiEV4gZEZ5E) , [unsplash.com search](https://unsplash.com/photos/EP_OHkgn1JI)
 
+Fonts: [google fonts](https://fonts.google.com/specimen/Press+Start+2P?query=press+start), [google fonts](https://fonts.google.com/specimen/Cinzel?query=cinzel)
+
 Markdown Guide: [ia.net](ia.net)
 
 Markdown Cheatsheet: [GitHub](github.com)
