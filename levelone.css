@@ -172,6 +172,8 @@ a:visited {
 
 #retry-button {
     padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: white;
 }
 
 footer{
