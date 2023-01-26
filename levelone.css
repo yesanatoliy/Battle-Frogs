@@ -183,3 +183,7 @@ footer{
     right: 0;
     background-color: black;
 }
+
+#game-screen{
+    margin: 0 auto;
+}
