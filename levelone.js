@@ -15,7 +15,7 @@ const battleLog = document.getElementById("battleLog")
 const showIntro = () => {
     let intro = document.createElement('p')
     intro.classList.add('dialogue')
-    intro.innerText = `Tree Frog: "Hey, what're you doing in my part of the swamp, punk?" (click to continue) --->`
+    intro.innerText = `Hungry Frog: "Hey, what're you doing in my part of the swamp, punk?" (click to continue) --->`
     gameScreen.prepend(intro)
     battleLog.classList.toggle('invisible')
     slashButton.classList.toggle('invisible')
@@ -32,14 +32,6 @@ const showBattleLog = () => {
         battleLog.classList.toggle('invisible')
     }
 }
-
-// const continueDialogue = () => {
-//     document.getElementById('game-screen').children[0].remove()
-//     let intro2 = document.createElement('p')
-//     intro2.classList.add('dialogue')
-//     intro2.innerText = `You: ribbit`
-//     gameScreen.prepend(intro2)
-// }
 
 const startBattle = () => {
     slashButton.classList.toggle('invisible')

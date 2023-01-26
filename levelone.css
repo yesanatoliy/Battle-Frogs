@@ -109,9 +109,8 @@ img {
 }
 
 img {
-    margin: 0 auto;
+    margin: 50px auto;
     width: 50%;
-    padding: 0
 }
 
 .move-screen {
@@ -188,4 +187,20 @@ footer{
 
 #game-screen{
     margin: 0 auto;
+}
+
+#player-name{
+    font-family: 'Press Start 2P', cursive;
+    grid-row: 2;
+    grid-column: 1;
+    align-self: end;
+    text-align: center;
+}
+
+#enemy-name{
+    font-family: 'Press Start 2P', cursive;
+    grid-row: 2;
+    grid-column: 3;
+    align-self: end;
+    text-align: center;
 }
