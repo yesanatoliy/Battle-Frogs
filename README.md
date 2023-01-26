@@ -4,7 +4,7 @@
 #### [GitHub](https://github.com/yesanatoliy) | [LinkedIn](https://www.linkedin.com/in/anatoliy-agadzhanov-5a2a54173/)
 ***
 ### ***Description***
-Battle frogs is a single-player turn-style action game where you fight in the swamp as a battle frog!
+Battle-Frogs is a single-player action game where you fight in the swamp againt other frogs as a battle frog!
 
 ***
 ### ***Technologies Used***
@@ -30,6 +30,7 @@ Battle frogs is a single-player turn-style action game where you fight in the sw
 - [ ] Make the level selector more interactive
 - [ ] Add explicit move types
 - [ ] Add experience/leveling system and skill trees for new moves
+- [ ] Add more levels, storyline
 
 ***
 ### ***Credits***
