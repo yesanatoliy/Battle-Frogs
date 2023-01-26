@@ -144,6 +144,7 @@ slashButton.addEventListener('click', () => {
         return
     }
     let swordSound = new Audio('swordsound.mp3')
+    swordSound.volume = 0.5
     swordSound.play()
 })
 
@@ -156,6 +157,7 @@ shootButton.addEventListener('click', () => {
         return
     }
     let bowSound = new Audio('bowsound.mp3')
+    bowSound.volume = 0.2
     bowSound.play()
 })
 
@@ -168,6 +170,7 @@ punchButton.addEventListener('click', () => {
         return
     }
     let punchSound = new Audio('punchsound.mp3')
+    punchSound.volume = 0.5
     punchSound.play()
 })
 
