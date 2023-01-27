@@ -170,12 +170,9 @@ punchButton.addEventListener('click', () => {
 
 document.getElementById('retry-button').addEventListener('click', restartGame)
 
-document.getElementById('game-screen').children[0].addEventListener('click', (e) => {
+document.getElementById('game-screen').children[0].addEventListener('click', () => {
     let dialogueBox = document.getElementById('game-screen').children[0]
-    
-    if(e.isTrusted === true){
-        buttonCounter += 1
-    }
+    buttonCounter += 1
     if(buttonCounter === 1){
     dialogueBox.innerText = `You: "ribbit"`
     }
