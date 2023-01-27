@@ -29,7 +29,7 @@ https://battle-frogs.surge.sh/
 - [ ] Add battle animations
 - [ ] Store custom names
 - [ ] Make the level selector more interactive
-- [ ] Add explicit move types
+- [ ] Add explicit move types/Change battle system
 - [ ] Add experience/leveling system and skill trees for new moves
 - [ ] Add more levels, storyline
 - [ ] Add music
