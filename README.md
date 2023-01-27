@@ -6,6 +6,7 @@
 ### ***Description***
 Battle-Frogs is a single-player action game where you fight in the swamp againt other frogs as a battle frog!
 
+https://battle-frogs.surge.sh/
 ***
 ### ***Technologies Used***
 * JavaScript
@@ -31,6 +32,7 @@ Battle-Frogs is a single-player action game where you fight in the swamp againt 
 - [ ] Add explicit move types
 - [ ] Add experience/leveling system and skill trees for new moves
 - [ ] Add more levels, storyline
+- [ ] Add music
 
 ***
 ### ***Credits***
