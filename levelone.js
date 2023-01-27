@@ -11,6 +11,7 @@ const enemyHealthDisplay = document.getElementById("enemyHealthDisplay")
 enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
 const gameScreen = document.querySelector("#game-screen")
 const battleLog = document.getElementById("battleLog")
+let buttonCounter = 0
 
 const showIntro = () => {
     let intro = document.createElement('p')
@@ -30,10 +31,12 @@ showIntro()
 const showBattleLog = () => {
     if(battleLog.classList.value === 'invisible'){
         battleLog.classList.toggle('invisible')
+        battleLog.innerText = `You encounter Hungerton! What will you do?`
     }
 }
 
 const startBattle = () => {
+    showBattleLog()
     slashButton.classList.toggle('invisible')
     shootButton.classList.toggle('invisible')
     punchButton.classList.toggle('invisible')
@@ -98,7 +101,6 @@ const choosePunch = () => {
 }
 
 const checkWinner = () => {
-    showBattleLog()
     if(playerHealth > 0 && enemyHealth <= 0){
         let winScreen = document.getElementById('win-screen')
         winScreen.id = null
@@ -168,7 +170,18 @@ punchButton.addEventListener('click', () => {
 
 document.getElementById('retry-button').addEventListener('click', restartGame)
 
-document.getElementById('game-screen').children[0].addEventListener('click', () => {
-    startBattle()
-    document.getElementById('game-screen').children[0].remove()
+document.getElementById('game-screen').children[0].addEventListener('click', (e) => {
+    let dialogueBox = document.getElementById('game-screen').children[0]
+    
+    if(e.isTrusted === true){
+        buttonCounter += 1
+    }
+    if(buttonCounter === 1){
+    dialogueBox.innerText = `You: "ribbit"`
+    }
+    else if(buttonCounter === 2){
+        startBattle()
+        dialogueBox.remove()
+    }
+    
 })
