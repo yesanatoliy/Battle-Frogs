@@ -56,27 +56,33 @@ const randomChoice = () => {
     }
 }
 
-const updateHealth = () => {
-    if(playerChoice === enemyChoice){
-        enemyHealth -= 5
-        playerHealth -= 5
-        battleLog.innerText = `It's a tie! You both chose ${playerChoice} and both took 5 damage.`
-    }
-    else if(
-        playerChoice === "slash" && enemyChoice === "shoot" ||
-        playerChoice === "punch" && enemyChoice === "slash" ||
-        playerChoice === "shoot" && enemyChoice === "punch"){
-        enemyHealth -= 10
-        battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage.`
-    }
-    else if(
-        playerChoice === "slash" && enemyChoice === "punch" ||
-        playerChoice === "shoot" && enemyChoice === "slash" ||
-        playerChoice === "punch" && enemyChoice === "shoot"
-    ){
-        playerHealth -= 10
-        battleLog.innerText = `They stop you in your tracks! The enemy chose ${enemyChoice} and you take 10 damage.`
-    }
+const updateText = () => {
+    let moveScreen = document.getElementsByClassName('move-screen')[0]
+    moveScreen.classList.toggle('invisible')
+    battleLog.innerText = `You ${playerChoice} at hungerton!`
+    battleLog.addEventListener('click', () => {
+        if(playerChoice === enemyChoice){
+            enemyHealth -= 5
+            playerHealth -= 5
+            battleLog.innerText = `It's a tie! You both chose ${playerChoice} and both took 5 damage. -->`
+        }
+        else if(
+            playerChoice === "slash" && enemyChoice === "shoot" ||
+            playerChoice === "punch" && enemyChoice === "slash" ||
+            playerChoice === "shoot" && enemyChoice === "punch"){
+            enemyHealth -= 10
+            battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage. -->`
+        }
+        else if(
+            playerChoice === "slash" && enemyChoice === "punch" ||
+            playerChoice === "shoot" && enemyChoice === "slash" ||
+            playerChoice === "punch" && enemyChoice === "shoot"
+        ){
+            playerHealth -= 10
+            battleLog.innerText = `They stop you in your tracks! The enemy chose ${enemyChoice} and you take 10 damage. -->`
+        }
+})
+   
     
     enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
     playerHealthDisplay.innerText = `HP: ${playerHealth}`
@@ -85,19 +91,19 @@ const updateHealth = () => {
 const chooseSlash = () => {
     playerChoice = "slash"
     randomChoice()
-    updateHealth()
+    updateText()
 }
 
 const chooseShoot = () => {
     playerChoice = "shoot"
     randomChoice()
-    updateHealth()
+    updateText()
 }
 
 const choosePunch = () => {
     playerChoice = "punch"
     randomChoice()
-    updateHealth()
+    updateText()
 }
 
 const checkWinner = () => {
