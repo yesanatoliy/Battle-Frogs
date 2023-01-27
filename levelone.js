@@ -29,7 +29,7 @@ const showIntro = () => {
 showIntro()
 
 const showBattleLog = () => {
-    if(battleLog.classList.value === 'invisible'){
+    if (battleLog.classList.value === 'invisible') {
         battleLog.classList.toggle('invisible')
         battleLog.innerText = `You encounter Hungerton! What will you do?`
     }
@@ -45,13 +45,13 @@ const startBattle = () => {
 }
 
 const randomChoice = () => {
-    if(Math.floor(Math.random()*10) <= 3){
+    if (Math.floor(Math.random() * 10) <= 3) {
         enemyChoice = "slash"
     }
-    else if (Math.floor(Math.random()*10) > 3 && Math.floor(Math.random()*10) <= 6){
+    else if (Math.floor(Math.random() * 10) > 3 && Math.floor(Math.random() * 10) <= 6) {
         enemyChoice = "shoot"
     }
-    else{
+    else {
         enemyChoice = "punch"
     }
 }
@@ -60,30 +60,39 @@ const updateText = () => {
     let moveScreen = document.getElementsByClassName('move-screen')[0]
     moveScreen.classList.toggle('invisible')
     battleLog.innerText = `You ${playerChoice} at hungerton! -->`
+    let battleLogClicks = 0
     battleLog.addEventListener('click', () => {
-        if(playerChoice === enemyChoice){
+        battleLogClicks += 1
+        if (battleLogClicks === 2){
+            moveScreen.classList.toggle('invisible')
+            battleLog.innerText = "What will you do next?"
+            battleLog.removeEventListener('click')
+        }
+        else if (battleLogClicks === 1){
+        if (playerChoice === enemyChoice) {
             enemyHealth -= 5
             playerHealth -= 5
             battleLog.innerText = `It's a tie! You both chose ${playerChoice} and both took 5 damage. -->`
         }
-        else if(
+        else if (
             playerChoice === "slash" && enemyChoice === "shoot" ||
             playerChoice === "punch" && enemyChoice === "slash" ||
-            playerChoice === "shoot" && enemyChoice === "punch"){
+            playerChoice === "shoot" && enemyChoice === "punch"
+            ) {
             enemyHealth -= 10
             battleLog.innerText = `You ${playerChoice} through! The enemy chose ${enemyChoice} and takes 10 damage. -->`
         }
-        else if(
+        else if (
             playerChoice === "slash" && enemyChoice === "punch" ||
             playerChoice === "shoot" && enemyChoice === "slash" ||
             playerChoice === "punch" && enemyChoice === "shoot"
-        ){
+        ) {
             playerHealth -= 10
             battleLog.innerText = `They stop you in your tracks! The enemy chose ${enemyChoice} and you take 10 damage. -->`
         }
-})
-   
-    
+}})
+
+
     enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
     playerHealthDisplay.innerText = `HP: ${playerHealth}`
 }
@@ -107,17 +116,17 @@ const choosePunch = () => {
 }
 
 const checkWinner = () => {
-    if(playerHealth > 0 && enemyHealth <= 0){
+    if (playerHealth > 0 && enemyHealth <= 0) {
         let winScreen = document.getElementById('win-screen')
         winScreen.id = null
         winScreen.classList.toggle("win-screen")
     }
-    else if (playerHealth <= 0 && enemyHealth > 0){
+    else if (playerHealth <= 0 && enemyHealth > 0) {
         let loseScreen = document.getElementById('lose-screen')
         loseScreen.id = null
         loseScreen.classList.toggle("lose-screen")
     }
-    else if (playerHealth <= 0 && enemyHealth <= 0){
+    else if (playerHealth <= 0 && enemyHealth <= 0) {
         let loseScreen = document.getElementById('lose-screen')
         loseScreen.id = null
         loseScreen.classList.toggle("lose-screen")
@@ -125,22 +134,22 @@ const checkWinner = () => {
 }
 
 const restartGame = () => {
-        let loseScreen = document.querySelector('.lose-screen')
-        console.log(loseScreen)
-        playerHealth = 100
-        enemyHealth = 25
-        enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
-        playerHealthDisplay.innerText = `HP: ${playerHealth}`
-        loseScreen.classList.toggle("lose-screen")
-        loseScreen.id = "lose-screen"
+    let loseScreen = document.querySelector('.lose-screen')
+    console.log(loseScreen)
+    playerHealth = 100
+    enemyHealth = 25
+    enemyHealthDisplay.innerText = `HP: ${enemyHealth}`
+    playerHealthDisplay.innerText = `HP: ${playerHealth}`
+    loseScreen.classList.toggle("lose-screen")
+    loseScreen.id = "lose-screen"
 }
 
 slashButton.addEventListener('click', () => {
-    if(playerHealth > 0 && enemyHealth > 0){
+    if (playerHealth > 0 && enemyHealth > 0) {
         chooseSlash()
         checkWinner()
     }
-    else{
+    else {
         return
     }
     let swordSound = new Audio('swordsound.mp3')
@@ -149,11 +158,11 @@ slashButton.addEventListener('click', () => {
 })
 
 shootButton.addEventListener('click', () => {
-    if(playerHealth > 0 && enemyHealth > 0){
+    if (playerHealth > 0 && enemyHealth > 0) {
         chooseShoot()
         checkWinner()
     }
-    else{
+    else {
         return
     }
     let bowSound = new Audio('bowsound.mp3')
@@ -162,11 +171,11 @@ shootButton.addEventListener('click', () => {
 })
 
 punchButton.addEventListener('click', () => {
-    if(playerHealth > 0 && enemyHealth > 0){
+    if (playerHealth > 0 && enemyHealth > 0) {
         choosePunch()
         checkWinner()
     }
-    else{
+    else {
         return
     }
     let punchSound = new Audio('punchsound.mp3')
@@ -179,12 +188,12 @@ document.getElementById('retry-button').addEventListener('click', restartGame)
 document.getElementById('game-screen').children[0].addEventListener('click', () => {
     let dialogueBox = document.getElementById('game-screen').children[0]
     buttonCounter += 1
-    if(buttonCounter === 1){
-    dialogueBox.innerText = `You: "ribbit"`
+    if (buttonCounter === 1) {
+        dialogueBox.innerText = `You: "ribbit"`
     }
-    else if(buttonCounter === 2){
+    else if (buttonCounter === 2) {
         startBattle()
         dialogueBox.remove()
     }
-    
+
 })
