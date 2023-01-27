@@ -59,7 +59,7 @@ const randomChoice = () => {
 const updateText = () => {
     let moveScreen = document.getElementsByClassName('move-screen')[0]
     moveScreen.classList.toggle('invisible')
-    battleLog.innerText = `You ${playerChoice} at hungerton!`
+    battleLog.innerText = `You ${playerChoice} at hungerton! -->`
     battleLog.addEventListener('click', () => {
         if(playerChoice === enemyChoice){
             enemyHealth -= 5
