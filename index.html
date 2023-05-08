@@ -5,29 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="levelone.css">
+    <script defer src="levelone.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
     <title>Battle-Frogs</title>
 </head>
 
 <body>
     <h1 class="title">Battle-Frogs</h1>
-    <div class="container">
-        <p class="levelone"><a href="levelone.html">Level One</a></p>
-        <p class="leveltwo"><a>Level To</a></p>
-        <a class="levelone" href="levelone.html">
-            <img alt="Bright swamp" class="levelone"
-                src="https://images.unsplash.com/photo-1584282479918-1ea22427dc0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80">
-        </a>
-        <img alt="Question mark" class="leveltwo"
-            src="https://images.unsplash.com/photo-1601027847350-0285867c31f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80">
-    </div>
+    <div id="game-screen">
+        <div class="container">
+            <div id="lose-screen">
+                <h1>YOU DIED.</h1>
+                <button id="retry-button">Retry?</button>
+            </div>
+            <div id="win-screen">
+                <h1>YOU WIN!</h1>
+                <p>Go back to select a new level!</p>
+            </div>
+            <p class="health-display" id="playerHealthDisplay"></p>
+            <div id="battleLog">
+                <p></p>
+            </div>
+            <p class="health-display" id="enemyHealthDisplay"></p>
+            <img alt="Light blue pixel frog" class="playerImg" src="frog1.jpeg">
+            <p id="player-name">GigaFrog</p>
+            <img alt="Green pixel frog catching a fly" class="enemyImg" src="frog2.jpeg">
+            <p id="enemy-name">Hungerton</p>
+            <div class="move-screen">
+                <button class="battleMove" id="slash">Slash ⚔</button>
+                <button class="battleMove" id="shoot">Shoot 🏹</button>
+                <button class="battleMove" id="punch">Punch 🥊</button>
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="levelselector.html">Level Selector</a></li>
+            </ul>
+        </footer>
+
+
 </body>
 
 </html>
